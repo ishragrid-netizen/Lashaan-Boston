@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lashaan Boston | Local Plumber in Chicago, IL 60619</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter & Plus Jakarta Sans for clean, trustworthy trade aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for clean plumbing & trade icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-slate-950 overflow-x-hidden">
+
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand / Logo -->
+                <button onclick="navigateTo('home')" class="flex items-center gap-3 group text-left focus:outline-none">
+                    <div class="w-11 h-11 rounded-2xl bg-sky-500/15 border border-sky-500/30 flex items-center justify-center text-sky-400 group-hover:bg-sky-500 group-hover:text-slate-950 transition-all duration-300">
+                        <i class="fa-solid fa-wrench text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="font-display text-xl font-bold tracking-tight text-white block leading-none">Lashaan Boston</span>
+                        <span class="text-[11px] uppercase tracking-widest text-sky-400 font-semibold">Local Plumber • IL 60619</span>
+                    </div>
+                </button>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-7">
+                    <button onclick="navigateTo('home')" class="nav-link text-sm font-medium text-sky-400 transition-colors" data-page="home">Home</button>
+                    <button onclick="navigateTo('about')" class="nav-link text-sm font-medium text-slate-300 hover:text-sky-400 transition-colors" data-page="about">About</button>
+                    <a href="#services" onclick="navigateTo('home')" class="text-sm font-medium text-slate-300 hover:text-sky-400 transition-colors">Services</a>
+                    <a href="#estimator" onclick="navigateTo('home')" class="text-sm font-medium text-slate-300 hover:text-sky-400 transition-colors">Service Check</a>
+                    <button onclick="navigateTo('contact')" class="nav-link text-sm font-medium text-slate-300 hover:text-sky-400 transition-colors" data-page="contact">Contact</button>
+                </nav>
+
+                <!-- Desktop CTA Button -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="tel:+17738083407" class="text-sm font-medium text-slate-300 hover:text-white flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-sky-400 text-xs"></i>
+                        +1 773-808-3407
+                    </a>
+                    <button onclick="navigateTo('contact')" class="px-5 py-2.5 rounded-full bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-sky-500/20">
+                        Request Plumber
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden p-3 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/70 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-2">
+            <button onclick="navigateTo('home')" class="w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-sky-400">Home</button>
+            <button onclick="navigateTo('about')" class="w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-sky-400">About Lashaan</button>
+            <a href="#services" onclick="navigateTo('home')" class="block px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-sky-400">Plumbing Services</a>
+            <a href="#estimator" onclick="navigateTo('home')" class="block px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-sky-400">Quick Issue Helper</a>
+            <button onclick="navigateTo('contact')" class="w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-sky-400">Contact & Dispatch</button>
+            <div class="pt-3 border-t border-slate-800 flex flex-col gap-3">
+                <a href="tel:+17738083407" class="w-full py-3 rounded-xl bg-slate-800 text-center text-slate-200 font-medium flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone text-sky-400"></i> Call +1 773-808-3407
+                </a>
+                <button onclick="navigateTo('contact')" class="w-full py-3 rounded-xl bg-sky-500 text-slate-950 text-center font-bold shadow-lg">
+                    Schedule Service (60619)
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN HOME VIEW -->
+    <main id="page-home" class="page-view">
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-20 lg:pt-44 lg:pb-32 overflow-hidden">
+            <!-- Ambient Cool Blue Glow -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-sky-600/15 blur-[130px] rounded-full pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Text Column -->
+                    <div class="lg:col-span-7 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-400 text-xs sm:text-sm font-medium mb-6">
+                            <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+                            Dedicated Plumbing Service Exclusively for Chicago, IL 60619
+                        </div>
+
+                        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+                            Fast, Reliable Plumbing Right Here in <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-sky-400 to-cyan-500">IL 60619</span>
+                        </h1>
+
+                        <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+                            Hi, I'm <strong class="text-white font-semibold">Lashaan Boston</strong>. Based right on S Eberhart Ave in Chicago, I provide dependable residential and light commercial plumbing repairs, drain clearing, fixture installations, and leak solutions exclusively for neighbors in <strong class="text-white">ZIP code 60619</strong>.
+                        </p>
+
+                        <!-- Action Buttons -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
+                            <a href="#booking" class="w-full sm:w-auto px-8 py-4 rounded-full bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-base transition-all shadow-xl shadow-sky-500/20 flex items-center justify-center gap-2">
+                                <span>Schedule Plumbing Service</span>
+                                <i class="fa-solid fa-arrow-right text-sm"></i>
+                            </a>
+                            <a href="tel:+17738083407" class="w-full sm:w-auto px-8 py-4 rounded-full bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-semibold text-base transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-phone text-sky-400"></i>
+                                <span>+1 773-808-3407</span>
+                            </a>
+                        </div>
+
+                        <!-- Quick Key Highlights -->
+                        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-800/80 max-w-lg mx-auto lg:mx-0">
+                            <div>
+                                <p class="text-xl sm:text-2xl font-bold text-sky-400">60619</p>
+                                <p class="text-xs text-slate-400 mt-0.5">Local Service Area</p>
+                            </div>
+                            <div>
+                                <p class="text-xl sm:text-2xl font-bold text-white">Rapid</p>
+                                <p class="text-xs text-slate-400 mt-0.5">Neighborhood Response</p>
+                            </div>
+                            <div>
+                                <p class="text-xl sm:text-2xl font-bold text-white">Honest</p>
+                                <p class="text-xs text-slate-400 mt-0.5">Upfront Quotes</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Visual Card Column -->
+                    <div class="lg:col-span-5">
+                        <div class="relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 shadow-2xl group">
+                            <!-- Plumbing Image with Fallback -->
+                            <img 
+                                src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=900&q=80" 
+                                onerror="this.onerror=null; this.src='https://placehold.co/800x950/0f172a/38bdf8?text=Lashaan+Boston+Plumbing+60619';"
+                                alt="Professional Plumbing Repair & Pipe Maintenance" 
+                                class="w-full h-[420px] sm:h-[480px] object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-90"
+                            >
+                            <!-- Gradient Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+                            
+                            <!-- Floating Info Badge inside Card -->
+                            <div class="absolute bottom-5 left-5 right-5 p-5 rounded-2xl bg-slate-900/90 backdrop-blur-md border border-slate-700/70">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <p class="text-xs uppercase tracking-wider text-sky-400 font-semibold">Neighborhood Plumber</p>
+                                        <h2 class="text-lg font-bold text-white">Lashaan Boston</h2>
+                                        <p class="text-xs text-slate-400 mt-0.5">7127 S Eberhart Ave Unit, Chicago, IL 60619</p>
+                                    </div>
+                                    <div class="w-12 h-12 rounded-2xl bg-sky-500/20 border border-sky-500/40 flex items-center justify-center text-sky-400">
+                                        <i class="fa-solid fa-faucet-drip text-xl"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Local Commitment Pillars -->
+        <section class="py-20 bg-slate-900/50 border-y border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center mb-14">
+                    <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Why Choose Local</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2 mb-4">Dedicated Exclusively to Chicago's 60619 Community</h2>
+                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+                        By focusing strictly on homes, apartments, and local businesses within <strong class="text-white">IL 60619</strong> (Greater Grand Crossing, Chatham, and Avalon Park), I arrive faster and treat every property like a neighbor's home.
+                    </p>
+                </div>
+
+                <!-- 3 Feature Pillars -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-7 rounded-3xl bg-slate-900 border border-slate-800 hover:border-sky-500/40 transition-all">
+                        <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-sky-400 flex items-center justify-center mb-5 text-xl">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Exclusively IL 60619</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Operating directly from 7127 S Eberhart Ave Unit, I serve only ZIP code 60619—eliminating cross-city traffic delays and long-distance trip charges.
+                        </p>
+                    </div>
+
+                    <div class="p-7 rounded-3xl bg-slate-900 border border-slate-800 hover:border-sky-500/40 transition-all">
+                        <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-sky-400 flex items-center justify-center mb-5 text-xl">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Clean, Dependable Craft</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Equipped for copper, PEX, PVC, and cast-iron systems common in South Side Chicago bungalows, two-flats, and multi-unit buildings.
+                        </p>
+                    </div>
+
+                    <div class="p-7 rounded-3xl bg-slate-900 border border-slate-800 hover:border-sky-500/40 transition-all">
+                        <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-sky-400 flex items-center justify-center mb-5 text-xl">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Clear Upfront Assessment</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Every job starts with an honest inspection and clear explanation of the repair options before any wrench turns.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plumbing Services Section -->
+        <section id="services" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-sky-400">What I Fix & Install</span>
+                        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2">Plumbing Services in IL 60619</h2>
+                    </div>
+                    <p class="text-slate-400 text-sm max-w-md">
+                        Comprehensive residential and light commercial plumbing solutions tailored for Chicago 60619 properties.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Service 1 -->
+                    <div class="p-6 rounded-3xl bg-slate-900/80 border border-slate-800 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+                        <div>
+                            <div class="w-11 h-11 rounded-xl bg-slate-800 text-sky-400 flex items-center justify-center mb-4">
+                                <i class="fa-solid fa-droplet text-lg"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Leak Detection & Pipe Repair</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Fast repair of dripping faucets, burst or frozen pipes, under-sink leaks, and faulty shutoff valves.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-800/80 text-xs text-sky-400 font-medium">
+                            Copper, PEX & PVC repairs
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="p-6 rounded-3xl bg-slate-900/80 border border-slate-800 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+                        <div>
+                            <div class="w-11 h-11 rounded-xl bg-slate-800 text-sky-400 flex items-center justify-center mb-4">
+                                <i class="fa-solid fa-sink text-lg"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Drain Cleaning & Clogs</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Clearing stubborn kitchen sinks, bathroom tubs, shower drains, floor drains, and backed-up toilets.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-800/80 text-xs text-sky-400 font-medium">
+                            Thorough flow restoration
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="p-6 rounded-3xl bg-slate-900/80 border border-slate-800 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+                        <div>
+                            <div class="w-11 h-11 rounded-xl bg-slate-800 text-sky-400 flex items-center justify-center mb-4">
+                                <i class="fa-solid fa-toilet text-lg"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Toilets, Sinks & Faucets</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Complete replacement and installation of toilets, wax rings, kitchen faucets, vanities, and garbage disposals.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-800/80 text-xs text-sky-400 font-medium">
+                            Clean, leak-free installation
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="p-6 rounded-3xl bg-slate-900/80 border border-slate-800 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+                        <div>
+                            <div class="w-11 h-11 rounded-xl bg-slate-800 text-sky-400 flex items-center justify-center mb-4">
+                                <i class="fa-solid fa-fire-flame-simple text-lg"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Water Heaters & Sump Pumps</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Troubleshooting, maintenance, and replacement of tank water heaters and basement sump pumps.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-800/80 text-xs text-sky-400 font-medium">
+                            Basement flood protection
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive 60619 Service & Priority Helper -->
+        <section id="estimator" class="py-20 bg-slate-900/50 border-y border-slate-800/80">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Quick Dispatch Check</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2">60619 Service Eligibility & Issue Helper</h2>
+                    <p class="text-slate-400 mt-2 text-sm sm:text-base">Select your plumbing issue and urgency to prepare your service request.</p>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 shadow-xl grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-7 space-y-5">
+                        <div>
+                            <label for="helper-issue" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">1. Select Plumbing Need</label>
+                            <select id="helper-issue" class="w-full px-4 py-3.5 rounded-xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-sky-500">
+                                <option value="Active Water Leak / Pipe Repair">Active Water Leak / Pipe Repair</option>
+                                <option value="Clogged Drain / Slow Sink or Tub">Clogged Drain / Slow Sink or Tub</option>
+                                <option value="Toilet Repair or New Installation">Toilet Repair or New Installation</option>
+                                <option value="Faucet / Disposal / Fixture Upgrade">Faucet / Disposal / Fixture Upgrade</option>
+                                <option value="Water Heater / Sump Pump Service">Water Heater / Sump Pump Service</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="helper-urgency" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">2. Urgency Level</label>
+                            <select id="helper-urgency" class="w-full px-4 py-3.5 rounded-xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-sky-500">
+                                <option value="Same-Day Urgent Repair">Same-Day Urgent Repair (Active Leak / Backup)</option>
+                                <option value="Next-Day Scheduled Visit">Next-Day Scheduled Visit</option>
+                                <option value="Flexible / Planned Installation">Flexible / Planned Installation</option>
+                            </select>
+                        </div>
+
+                        <div class="flex items-center gap-3 p-4 rounded-2xl bg-slate-950/70 border border-slate-800">
+                            <i class="fa-solid fa-circle-check text-sky-400 text-lg"></i>
+                            <span class="text-xs sm:text-sm text-slate-300">Service Area Confirmed: <strong class="text-white">Chicago, IL 60619 Only</strong></span>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-5 p-6 rounded-2xl bg-sky-500/10 border border-sky-500/30 flex flex-col justify-between h-full">
+                        <div>
+                            <span class="text-xs uppercase tracking-wider text-sky-400 font-bold block mb-2">Dispatch Summary</span>
+                            <h3 id="summary-issue-title" class="text-lg font-bold text-white mb-1">Active Water Leak / Pipe Repair</h3>
+                            <p id="summary-urgency-text" class="text-xs text-slate-300 mb-4">Priority: Same-Day Urgent Repair</p>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-6">
+                                Lashaan Boston provides on-site diagnosis and straightforward quotes for all 60619 addresses.
+                            </p>
+                        </div>
+                        <a href="#booking" onclick="syncHelperToForm()" class="w-full py-3.5 rounded-full bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-center text-sm transition-colors">
+                            Continue to Request Form
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking & Contact Section -->
+        <section id="booking" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    
+                    <!-- Left Contact & Service Area Details -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Direct Dispatch</span>
+                            <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2 mb-4">Contact Lashaan Boston</h2>
+                            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                                Need a reliable plumber in <strong class="text-white">Chicago, IL 60619</strong>? Call directly for urgent plumbing issues or submit your service request below.
+                            </p>
+                        </div>
+
+                        <!-- Contact Cards -->
+                        <div class="space-y-4">
+                            <!-- Phone -->
+                            <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-between gap-4">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-xl bg-sky-500/15 text-sky-400 flex items-center justify-center shrink-0">
+                                        <i class="fa-solid fa-phone text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-slate-400">Direct Phone / Text</p>
+                                        <a href="tel:+17738083407" class="text-base sm:text-lg font-bold text-white hover:text-sky-400 transition-colors">
+                                            +1 773-808-3407
+                                        </a>
+                                    </div>
+                                </div>
+                                <button onclick="copyPhoneNumber()" class="p-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-medium transition-colors" title="Copy Phone Number">
+                                    <i class="fa-regular fa-copy"></i> Copy
+                                </button>
+                            </div>
+
+                            <!-- Address -->
+                            <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-sky-500/15 text-sky-400 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-map-pin text-lg"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400">Local Base Address</p>
+                                    <p class="text-base font-bold text-white mt-0.5">Lashaan Boston</p>
+                                    <p class="text-sm text-slate-300">7127 S Eberhart Ave Unit</p>
+                                    <p class="text-sm text-slate-300">Chicago, IL 60619</p>
+                                    <p class="text-xs text-sky-400 font-semibold mt-1 uppercase tracking-wider">United States</p>
+                                </div>
+                            </div>
+
+                            <!-- Strict Service Area Notice -->
+                            <div class="p-5 rounded-2xl bg-sky-500/10 border border-sky-500/30 flex items-start gap-3.5">
+                                <i class="fa-solid fa-circle-info text-sky-400 mt-1"></i>
+                                <div class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                                    <strong class="text-sky-300">Service Area Notice:</strong> Plumbing services are exclusively provided for residences and properties located within <strong class="text-white">Chicago, IL 60619</strong>.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Service Request Form -->
+                    <div class="lg:col-span-7">
+                        <div class="p-6 sm:p-10 rounded-3xl bg-slate-900 border border-slate-800 shadow-2xl">
+                            <h3 class="text-2xl font-bold text-white mb-2">Request a Plumber in IL 60619</h3>
+                            <p class="text-slate-400 text-sm mb-6">Complete the form below and Lashaan Boston will reach out promptly to confirm your appointment.</p>
+
+                            <form id="booking-form" class="space-y-5">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label for="client-name" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Your Name *</label>
+                                        <input type="text" id="client-name" required placeholder="e.g., Marcus Carter" class="w-full px-4 py-3.5 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-sky-500 transition-colors">
+                                    </div>
+                                    <div>
+                                        <label for="client-phone" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Phone Number *</label>
+                                        <input type="tel" id="client-phone" required placeholder="(773) 555-0148" class="w-full px-4 py-3.5 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-sky-500 transition-colors">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label for="service-date" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Preferred Date *</label>
+                                        <input type="date" id="service-date" required class="w-full px-4 py-3.5 rounded-xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-sky-500 transition-colors">
+                                    </div>
+                                    <div>
+                                        <label for="service-zip" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Service ZIP Code *</label>
+                                        <input type="text" id="service-zip" value="60619" required maxlength="5" placeholder="60619" class="w-full px-4 py-3.5 rounded-xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-sky-500 transition-colors">
+                                        <p id="zip-warning" class="hidden text-xs text-rose-400 mt-1.5">
+                                            <i class="fa-solid fa-triangle-exclamation mr-1"></i> Service is currently provided for IL 60619 only.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label for="service-type" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Plumbing Service Needed</label>
+                                        <select id="service-type" class="w-full px-4 py-3.5 rounded-xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-sky-500 transition-colors">
+                                            <option value="Active Water Leak / Pipe Repair">Active Water Leak / Pipe Repair</option>
+                                            <option value="Clogged Drain / Slow Sink or Tub">Clogged Drain / Slow Sink or Tub</option>
+                                            <option value="Toilet Repair or New Installation">Toilet Repair or New Installation</option>
+                                            <option value="Faucet / Disposal / Fixture Upgrade">Faucet / Disposal / Fixture Upgrade</option>
+                                            <option value="Water Heater / Sump Pump Service">Water Heater / Sump Pump Service</option>
+                                            <option value="Other Plumbing Issue">Other Plumbing Issue</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="urgency-select" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Urgency</label>
+                                        <select id="urgency-select" class="w-full px-4 py-3.5 rounded-xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-sky-500 transition-colors">
+                                            <option value="Same-Day Urgent Repair">Same-Day Urgent Repair</option>
+                                            <option value="Next-Day Scheduled Visit">Next-Day Scheduled Visit</option>
+                                            <option value="Flexible / Planned Installation">Flexible / Planned Installation</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="service-notes" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Street Address in 60619 & Problem Description</label>
+                                    <textarea id="service-notes" rows="3" placeholder="Enter your street address in IL 60619 and briefly describe the leak, clog, or fixture issue..." class="w-full px-4 py-3.5 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-sky-500 transition-colors"></textarea>
+                                </div>
+
+                                <button type="submit" class="w-full py-4 rounded-full bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-base transition-all shadow-lg shadow-sky-500/20 flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                    <span>Submit Service Request</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- DEDICATED ABOUT PAGE VIEW -->
+    <section id="page-about" class="page-view hidden pt-32 pb-24 min-h-screen">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-10">
+                <button onclick="navigateTo('home')" class="inline-flex items-center gap-2 text-sm text-sky-400 hover:text-sky-300 font-medium mb-6">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Home
+                </button>
+                <span class="block text-xs font-bold uppercase tracking-widest text-sky-400">Local Trade Expertise</span>
+                <h1 class="font-display text-4xl sm:text-5xl font-bold text-white mt-2 mb-6">About Lashaan Boston</h1>
+                <p class="text-lg text-slate-300 leading-relaxed">
+                    Located right at <strong class="text-white">7127 S Eberhart Ave Unit, Chicago, IL 60619</strong>, I am a neighborhood plumber committed to providing prompt, honest, and lasting plumbing repairs exclusively for our <strong class="text-white">60619</strong> community.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-16">
+                <div class="lg:col-span-5">
+                    <div class="rounded-3xl overflow-hidden border border-slate-800 bg-slate-900 shadow-xl">
+                        <img 
+                            src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/700x800/0f172a/38bdf8?text=Lashaan+Boston+Plumbing';"
+                            alt="Lashaan Boston Plumbing Work" 
+                            class="w-full h-96 object-cover"
+                        >
+                        <div class="p-6">
+                            <h2 class="text-lg font-bold text-white">Chicago 60619 Plumber</h2>
+                            <p class="text-sm text-slate-400 mt-1">7127 S Eberhart Ave Unit, Chicago, IL 60619</p>
+                            <div class="mt-4 pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
+                                <span class="text-slate-400">Service Zone</span>
+                                <span class="text-sky-400 font-bold text-sm">IL 60619 Only</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6 text-slate-300 leading-relaxed">
+                    <div class="p-7 rounded-3xl bg-slate-900 border border-slate-800 space-y-4">
+                        <h3 class="text-xl font-bold text-white">Dedicated to Our South Side Neighborhood</h3>
+                        <p class="text-sm sm:text-base">
+                            Plumbing emergencies never wait for a convenient moment. When a pipe leaks or a main drain backs up, waiting hours for a technician driving in from the suburbs only adds stress and water damage. By dedicating my practice solely to <strong class="text-white">Chicago, IL 60619</strong>, I keep response times fast and service personal.
+                        </p>
+                        <p class="text-sm sm:text-base">
+                            I understand the specific plumbing layouts found throughout 60619—from classic brick bungalows and two-flats to modern townhomes—and arrive prepared with quality replacement parts to fix issues right the first time.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-6 rounded-2xl bg-slate-900/70 border border-slate-800">
+                            <i class="fa-solid fa-house-chimney-crack text-sky-400 text-xl mb-3"></i>
+                            <h4 class="font-bold text-white mb-1">Chicago Home Specialists</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Experienced with older galvanized-to-PEX/copper upgrades, basement stacks, and winter freeze prevention.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-slate-900/70 border border-slate-800">
+                            <i class="fa-solid fa-handshake text-sky-400 text-xl mb-3"></i>
+                            <h4 class="font-bold text-white mb-1">Respectful & Tidy</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Drop cloths, boot covers, and thorough cleanup after every repair or fixture installation.</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <button onclick="navigateTo('contact')" class="px-8 py-4 rounded-full bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-sm transition-all shadow-lg">
+                            Schedule a Visit in IL 60619
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEDICATED CONTACT PAGE VIEW -->
+    <section id="page-contact" class="page-view hidden pt-32 pb-24 min-h-screen">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <button onclick="navigateTo('home')" class="inline-flex items-center gap-2 text-sm text-sky-400 hover:text-sky-300 font-medium mb-6">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </button>
+            <span class="block text-xs font-bold uppercase tracking-widest text-sky-400">Get In Touch</span>
+            <h1 class="font-display text-4xl sm:text-5xl font-bold text-white mt-2 mb-4">Contact Lashaan Boston</h1>
+            <p class="text-slate-300 text-base sm:text-lg max-w-2xl mb-12">
+                Need plumbing service, leak repair, or fixture installation in <strong class="text-white">Chicago, IL 60619</strong>? Call directly or send a dispatch message below.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <!-- Address Card -->
+                <div class="p-7 rounded-3xl bg-slate-900 border border-slate-800">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-500/15 text-sky-400 flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Business Address</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Lashaan Boston<br>
+                        7127 S Eberhart Ave Unit<br>
+                        Chicago, IL 60619<br>
+                        UNITED STATES
+                    </p>
+                </div>
+
+                <!-- Phone Card -->
+                <div class="p-7 rounded-3xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-sky-500/15 text-sky-400 flex items-center justify-center mb-4 text-xl">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Phone & Text Dispatch</h3>
+                        <a href="tel:+17738083407" class="text-lg font-bold text-sky-400 hover:underline block mb-1">
+                            +1 773-808-3407
+                        </a>
+                        <p class="text-xs text-slate-400">Prompt response for IL 60619 residents</p>
+                    </div>
+                    <button onclick="copyPhoneNumber()" class="mt-4 w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-white transition-colors">
+                        <i class="fa-regular fa-copy mr-1"></i> Copy Phone Number
+                    </button>
+                </div>
+
+                <!-- Service Area Card -->
+                <div class="p-7 rounded-3xl bg-slate-900 border border-slate-800">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-500/15 text-sky-400 flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-map"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Service Territory</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        <strong class="text-white">Coverage:</strong> Chicago, IL 60619 Only<br>
+                        <strong class="text-white">Property Types:</strong> Homes, Apartments & Local Businesses<br>
+                        <span class="text-xs text-slate-400 block mt-2">Fast local dispatch from S Eberhart Ave.</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Direct Contact Message Form -->
+            <div class="p-8 sm:p-10 rounded-3xl bg-slate-900 border border-slate-800">
+                <h2 class="text-2xl font-bold text-white mb-2">Send a Service Inquiry</h2>
+                <p class="text-sm text-slate-400 mb-6">Exclusively serving properties in Chicago, IL 60619.</p>
+                <form id="contact-page-form" class="space-y-5">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Full Name *</label>
+                            <input type="text" required placeholder="Your Name" class="w-full px-4 py-3.5 rounded-xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-sky-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Phone Number *</label>
+                            <input type="tel" required placeholder="+1 (773) 000-0000" class="w-full px-4 py-3.5 rounded-xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-sky-500">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Property ZIP Code (60619 Only) *</label>
+                            <input type="text" id="contact-zip" value="60619" maxlength="5" required class="w-full px-4 py-3.5 rounded-xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-sky-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Preferred Date</label>
+                            <input type="date" class="w-full px-4 py-3.5 rounded-xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-sky-500">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Address in 60619 & Plumbing Details *</label>
+                        <textarea rows="4" required placeholder="Describe your plumbing issue and street address in IL 60619..." class="w-full px-4 py-3.5 rounded-xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-sky-500"></textarea>
+                    </div>
+                    <button type="submit" class="px-8 py-4 rounded-full bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-sm transition-all shadow-lg">
+                        Send Request to Lashaan
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEDICATED PRIVACY POLICY PAGE VIEW -->
+    <section id="page-privacy" class="page-view hidden pt-32 pb-24 min-h-screen">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <button onclick="navigateTo('home')" class="inline-flex items-center gap-2 text-sm text-sky-400 hover:text-sky-300 font-medium mb-6">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </button>
+            <span class="block text-xs font-bold uppercase tracking-widest text-sky-400">Legal Information</span>
+            <h1 class="font-display text-4xl font-bold text-white mt-2 mb-2">Privacy Policy</h1>
+            <p class="text-xs text-slate-400 mb-8">Last Updated: November 2026 • Lashaan Boston Plumbing Services (Chicago, IL 60619)</p>
+
+            <div class="p-8 sm:p-10 rounded-3xl bg-slate-900 border border-slate-800 space-y-6 text-slate-300 text-sm sm:text-base leading-relaxed">
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">1. Information We Collect</h2>
+                    <p>
+                        When you submit a service request or inquiry through this website, Lashaan Boston collects only the contact and property details you voluntarily provide—such as your name, phone number, street address, plumbing issue description, and ZIP code (to confirm service eligibility within <strong class="text-white">Chicago, IL 60619</strong>).
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">2. How We Use Your Information</h2>
+                    <p>Your information is used solely for:</p>
+                    <ul class="list-disc pl-5 mt-2 space-y-1 text-slate-300">
+                        <li>Verifying that your service address falls within Chicago ZIP code 60619.</li>
+                        <li>Scheduling on-site plumbing visits, diagnosing repairs, and providing service quotes.</li>
+                        <li>Communicating arrival windows and follow-up service updates.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">3. Confidentiality & Data Protection</h2>
+                    <p>
+                        Lashaan Boston does not sell, rent, or distribute your personal information or address details to third-party advertisers or lead brokers. Your records are kept private and used only to deliver requested plumbing services.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">4. Contact Information</h2>
+                    <p>
+                        For privacy inquiries or to update your contact details, reach out directly:<br>
+                        <strong class="text-white">Address:</strong> 7127 S Eberhart Ave Unit, Chicago, IL 60619, UNITED STATES<br>
+                        <strong class="text-white">Phone:</strong> <a href="tel:+17738083407" class="text-sky-400 hover:underline">+1 773-808-3407</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEDICATED TERMS OF SERVICE PAGE VIEW -->
+    <section id="page-terms" class="page-view hidden pt-32 pb-24 min-h-screen">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <button onclick="navigateTo('home')" class="inline-flex items-center gap-2 text-sm text-sky-400 hover:text-sky-300 font-medium mb-6">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </button>
+            <span class="block text-xs font-bold uppercase tracking-widest text-sky-400">Service Guidelines</span>
+            <h1 class="font-display text-4xl font-bold text-white mt-2 mb-2">Terms of Service</h1>
+            <p class="text-xs text-slate-400 mb-8">Effective Date: November 2026 • Lashaan Boston Plumbing Services</p>
+
+            <div class="p-8 sm:p-10 rounded-3xl bg-slate-900 border border-slate-800 space-y-6 text-slate-300 text-sm sm:text-base leading-relaxed">
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">1. Geographic Service Area (IL 60619 Only)</h2>
+                    <p>
+                        Plumbing services provided by Lashaan Boston are strictly limited to residential and commercial properties located within <strong class="text-white">Chicago, IL 60619</strong>. Service requests outside ZIP code 60619 cannot be fulfilled.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">2. Estimates & Scope of Work</h2>
+                    <p>
+                        All repair and installation pricing is determined based on on-site inspection, required replacement parts, and labor complexity. Work begins only after the scope and quote have been reviewed and approved by the property owner or authorized tenant.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">3. Property Access & Safety</h2>
+                    <p>
+                        The client agrees to provide safe, clear access to the affected plumbing fixtures, main water shutoff valves, basement cleanouts, or utility areas during the scheduled appointment window.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">4. Rescheduling & Cancellations</h2>
+                    <p>
+                        If you need to reschedule or cancel an appointment in IL 60619, please notify Lashaan Boston as early as possible by calling or texting <a href="tel:+17738083407" class="text-sky-400 hover:underline">+1 773-808-3407</a>.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">5. Business Details</h2>
+                    <p>
+                        <strong class="text-white">Lashaan Boston</strong><br>
+                        7127 S Eberhart Ave Unit, Chicago, IL 60619, UNITED STATES<br>
+                        Phone: +1 773-808-3407
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-900">
+                <div class="text-center md:text-left">
+                    <span class="font-display text-xl font-bold text-white block">Lashaan Boston</span>
+                    <p class="text-xs text-slate-400 mt-1">
+                        7127 S Eberhart Ave Unit, Chicago, IL 60619, UNITED STATES • <a href="tel:+17738083407" class="text-sky-400 hover:underline">+1 773-808-3407</a>
+                    </p>
+                </div>
+
+                <!-- Footer Page Links -->
+                <div class="flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-slate-400">
+                    <button onclick="navigateTo('home')" class="hover:text-sky-400 transition-colors">Home</button>
+                    <button onclick="navigateTo('about')" class="hover:text-sky-400 transition-colors">About</button>
+                    <button onclick="navigateTo('contact')" class="hover:text-sky-400 transition-colors">Contact</button>
+                    <button onclick="navigateTo('privacy')" class="hover:text-sky-400 transition-colors">Privacy Policy</button>
+                    <button onclick="navigateTo('terms')" class="hover:text-sky-400 transition-colors">Terms of Service</button>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 text-center sm:text-left">
+                <p>Local Plumber Serving Chicago, IL 60619 Exclusively</p>
+                <p>&copy; <span id="current-year"></span> Lashaan Boston Plumbing Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Notification Modal (Replaces alert) -->
+    <div id="notification-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
+        <div class="max-w-md w-full p-6 sm:p-8 rounded-3xl bg-slate-900 border border-slate-700 shadow-2xl text-center transform transition-all">
+            <div id="modal-icon-container" class="w-14 h-14 rounded-full bg-sky-500/20 text-sky-400 flex items-center justify-center mx-auto mb-4 text-2xl">
+                <i id="modal-icon" class="fa-solid fa-check"></i>
+            </div>
+            <h3 id="modal-title" class="text-xl font-bold text-white mb-2">Service Request Sent!</h3>
+            <p id="modal-message" class="text-sm text-slate-300 leading-relaxed mb-6">
+                Thank you for reaching out! Lashaan Boston will review your IL 60619 plumbing request and call you shortly.
+            </p>
+            <button onclick="closeModal()" class="w-full py-3 rounded-full bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-sm transition-colors">
+                Done
+            </button>
+        </div>
+    </div>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // Dynamic current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Single-Page Multi-View Navigation Router (Home, About, Contact, Privacy, Terms)
+        function navigateTo(pageName) {
+            const views = document.querySelectorAll('.page-view');
+            views.forEach(view => view.classList.add('hidden'));
+
+            const targetView = document.getElementById(`page-${pageName}`);
+            if (targetView) {
+                targetView.classList.remove('hidden');
+            }
+
+            // Update active state on desktop nav buttons
+            document.querySelectorAll('.nav-link').forEach(btn => {
+                if (btn.dataset.page === pageName) {
+                    btn.classList.remove('text-slate-300');
+                    btn.classList.add('text-sky-400');
+                } else {
+                    btn.classList.remove('text-sky-400');
+                    btn.classList.add('text-slate-300');
+                }
+            });
+
+            // Close mobile menu if open
+            const mobileMenuEl = document.getElementById('mobile-menu');
+            if (mobileMenuEl && !mobileMenuEl.classList.contains('hidden')) {
+                mobileMenuEl.classList.add('hidden');
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Quick Issue Helper Sync
+        const helperIssue = document.getElementById('helper-issue');
+        const helperUrgency = document.getElementById('helper-urgency');
+        const summaryIssueTitle = document.getElementById('summary-issue-title');
+        const summaryUrgencyText = document.getElementById('summary-urgency-text');
+
+        function updateHelperSummary() {
+            summaryIssueTitle.textContent = helperIssue.value;
+            summaryUrgencyText.textContent = `Priority: ${helperUrgency.value}`;
+        }
+
+        helperIssue.addEventListener('change', updateHelperSummary);
+        helperUrgency.addEventListener('change', updateHelperSummary);
+
+        function syncHelperToForm() {
+            const serviceTypeSelect = document.getElementById('service-type');
+            const urgencySelect = document.getElementById('urgency-select');
+            if (serviceTypeSelect) serviceTypeSelect.value = helperIssue.value;
+            if (urgencySelect) urgencySelect.value = helperUrgency.value;
+        }
+
+        // Live ZIP Code Validation (IL 60619 Only)
+        const zipInput = document.getElementById('service-zip');
+        const zipWarning = document.getElementById('zip-warning');
+
+        zipInput.addEventListener('input', () => {
+            const val = zipInput.value.trim();
+            if (val.length === 5 && val !== '60619') {
+                zipWarning.classList.remove('hidden');
+                zipInput.classList.add('border-rose-500');
+            } else {
+                zipWarning.classList.add('hidden');
+                zipInput.classList.remove('border-rose-500');
+            }
+        });
+
+        // Copy Phone Number using execCommand fallback
+        function copyPhoneNumber() {
+            const phoneText = '+1 773-808-3407';
+            const tempInput = document.createElement('textarea');
+            tempInput.value = phoneText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            try {
+                document.execCommand('copy');
+                showModal(
+                    'Phone Number Copied',
+                    'Lashaan Boston\'s number (+1 773-808-3407) has been copied to your clipboard.',
+                    'fa-copy',
+                    false
+                );
+            } catch (err) {
+                showModal(
+                    'Direct Phone Number',
+                    'Call or text Lashaan Boston directly at +1 773-808-3407.',
+                    'fa-phone',
+                    false
+                );
+            }
+            document.body.removeChild(tempInput);
+        }
+
+        // Custom Modal Helpers
+        const modal = document.getElementById('notification-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalMessage = document.getElementById('modal-message');
+        const modalIcon = document.getElementById('modal-icon');
+        const modalIconContainer = document.getElementById('modal-icon-container');
+
+        function showModal(title, message, iconClass = 'fa-check', isWarning = false) {
+            modalTitle.textContent = title;
+            modalMessage.textContent = message;
+            modalIcon.className = `fa-solid ${iconClass}`;
+            
+            if (isWarning) {
+                modalIconContainer.className = 'w-14 h-14 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center mx-auto mb-4 text-2xl';
+            } else {
+                modalIconContainer.className = 'w-14 h-14 rounded-full bg-sky-500/20 text-sky-400 flex items-center justify-center mx-auto mb-4 text-2xl';
+            }
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Main Booking Form Submission Handler
+        const bookingForm = document.getElementById('booking-form');
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('client-name').value.trim();
+            const zip = document.getElementById('service-zip').value.trim();
+            const service = document.getElementById('service-type').value;
+
+            if (zip !== '60619') {
+                showModal(
+                    'Outside Service Area (IL 60619 Only)',
+                    `Hi ${name}, Lashaan Boston exclusively provides plumbing services within Chicago, IL 60619. Please update the ZIP code to 60619 if your property is located in that area.`,
+                    'fa-location-crosshairs',
+                    true
+                );
+                return;
+            }
+
+            showModal(
+                'Plumbing Request Received!',
+                `Thank you, ${name}! Your request for ${service} in Chicago (60619) has been logged. Lashaan Boston will call you shortly—or call +1 773-808-3407 for immediate dispatch.`,
+                'fa-wrench',
+                false
+            );
+            
+            bookingForm.reset();
+            document.getElementById('service-zip').value = '60619';
+        });
+
+        // Contact Page Form Submission Handler
+        const contactPageForm = document.getElementById('contact-page-form');
+        if (contactPageForm) {
+            contactPageForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const zipVal = document.getElementById('contact-zip').value.trim();
+                if (zipVal !== '60619') {
+                    showModal(
+                        'Outside Service Area (IL 60619 Only)',
+                        'Lashaan Boston exclusively serves properties within Chicago, IL 60619. Please verify your property ZIP code is 60619.',
+                        'fa-location-crosshairs',
+                        true
+                    );
+                    return;
+                }
+                showModal(
+                    'Message Sent to Lashaan!',
+                    'Thank you for reaching out. Lashaan Boston will respond promptly—or call +1 773-808-3407 directly.',
+                    'fa-envelope-circle-check',
+                    false
+                );
+                contactPageForm.reset();
+                document.getElementById('contact-zip').value = '60619';
+            });
+        }
+    </script>
+</body>
+</html>
